@@ -37,6 +37,7 @@ struct CHandcard{
 			case club:str_val+=(char)5;break;
 			case heart:str_val+=(char)3;break;
 			case spade:str_val+=(char)6;break;
+			default:break;
 		}
 		switch(number){
 			case 1:str_val+='A';break;

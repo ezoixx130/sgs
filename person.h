@@ -21,8 +21,9 @@ struct CPerson{
 	CPerson(string nm,int hp,CSkill skl):name(nm),health(hp){skill.push_back(skl);}
 	CPerson(string nm,int hp,vector<CSkill> skl):name(nm),health(hp),skill(skl){}
 	friend ostream& operator<<(ostream& os,CPerson prs){
-		os<<(prs.name+' ')<<prs.health<<(string)""<<endl;
-		for(vector<CSkill>::iterator iter=skill.begin();iter!=skill.end();++iter)os<<(string)"\t"<<*iter<<endl;
+		os<<(prs.name+' ')<<prs.health<<(string)""<<endl;
+		for(vector<CSkill>::iterator iter=prs.skill.begin();iter!=prs.skill.end();++iter)os<<(string)"\t"<<*iter<<endl;
+		return os;
 	}
 };
 #endif
